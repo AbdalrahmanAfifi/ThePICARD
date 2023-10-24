@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className=" p-24">
-     <h1>Home</h1>
+<main className="">
+      <h1>home</h1>
     </main>
   )
 }

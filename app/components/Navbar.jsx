@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { UserAuth } from "../context/AuthContext";
+import Image from 'next/image'
 
 const Navbar = () => {
   const { user, googleSignIn, logOut } = UserAuth();
@@ -31,8 +32,12 @@ const Navbar = () => {
   }, [user]);
 
   return (
-    <div className="h-20 w-full border-b-2 flex items-center justify-between p-2">
+    <div className="h-20 w-full flex items-center justify-between p-2">
+        
       <ul className="flex">
+      <li className="p-2 cursor-pointer">
+      <Image src="/logo.png" width={50} height={50} alt="" />
+        </li>
         <li className="p-2 cursor-pointer">
           <Link href="/">Home</Link>
         </li>
