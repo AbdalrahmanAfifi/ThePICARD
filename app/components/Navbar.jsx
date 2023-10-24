@@ -57,9 +57,6 @@ const Navbar = () => {
           <li onClick={handleSignIn} className="p-2 cursor-pointer">
             Login
           </li>
-          <li onClick={handleSignIn} className="p-2 cursor-pointer">
-            Sign up
-          </li>
         </ul>
       ) : (
         <div>
