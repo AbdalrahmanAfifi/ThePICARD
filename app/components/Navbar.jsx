@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { UserAuth } from "../context/AuthContext";
 import Image from 'next/image'
+import './styles.css';
 
 const Navbar = () => {
   const { user, googleSignIn, logOut } = UserAuth();
@@ -38,9 +39,11 @@ const Navbar = () => {
       <li className="p-2 cursor-pointer">
       <Image src="/logo.png" width={50} height={50} alt="" />
         </li>
+        <button className="button">
         <li className="p-2 cursor-pointer">
           <Link href="/">Home</Link>
         </li>
+        </button>
         <li className="p-2 cursor-pointer">
           <Link href="/about">About</Link>
         </li>
@@ -61,9 +64,11 @@ const Navbar = () => {
       ) : (
         <div>
           <p>Welcome, {user.displayName}</p>
+          <button className ="button">
           <p className="cursor-pointer" onClick={handleSignOut}>
             Sign out
           </p>
+          </button>
         </div>
       )}
     </div>
