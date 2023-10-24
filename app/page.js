@@ -1,11 +1,9 @@
-import Image from 'next/image'
-
 import React from 'react';
 import './styles.css';
 function Home() {
   return (
-    <main className="main-container">
-      <div className="max-w-5xl w-full items-center justify-between font-mono text-lg lg:flex">
+    <main className="main-container gradient">
+      <div className="max-w-5xl w-full items-center justify-between font-mono text-lg lg:flex grad">
         {/* The following code shows the logo in the top right corner and takes you back to the login page when clicked*/}
         <a href="/homepage">
         </a>

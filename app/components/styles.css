@@ -128,3 +128,7 @@ html body {
   margin: 0;
   overflow-y: inherit;
 }
+
+.gradient { 
+  background-image: radial-gradient(circle closest-corner at 76% 57%,blue 1%,#0000 45%);
+}
