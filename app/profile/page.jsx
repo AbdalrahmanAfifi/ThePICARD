@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { UserAuth } from "../context/AuthContext";
 
@@ -16,10 +16,10 @@ const ProfilePage = () => {
 
   return (
     <div className="p-4">
-      { user ? (
-        <p>Welcome, {user.displayName} - You're logged in</p>
-      ) : (
+      {loading ? null : !user ? (
         <p>You must be logged in to view this page - protected route</p>
+      ) : (
+        <p>Welcome, {user.displayName} - You're logged in</p>
       )}
     </div>
   );
