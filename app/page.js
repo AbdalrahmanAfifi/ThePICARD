@@ -50,7 +50,7 @@ const Home = () => {
             </button>
           </a>
           {/* the following code makes the button that will take you to the pastResults page */}
-          <a href="./pastResults">
+          <a href="/pastResults">
             <button
               style={{
                 background: 'dark-grey',
