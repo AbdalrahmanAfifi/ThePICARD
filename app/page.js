@@ -1,51 +1,70 @@
-import React from 'react';
+"use client";
+import React, { useState, useEffect } from "react";
 import './styles.css';
-function Home() {
+import { UserAuth } from './context/AuthContext';
+
+const Home = () => {
+  const { user } = UserAuth();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const checkAuthentication = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 50));
+      setLoading(false);
+    };
+    checkAuthentication();
+  }, [user]);
+
   return (
+    
     <main className="main-container gradient">
       <div className="max-w-5xl w-full items-center justify-between font-mono text-lg lg:flex grad">
         {/* The following code shows the logo in the top right corner and takes you back to the login page when clicked*/}
         <a href="/homepage">
         </a>
       </div>
-      <div>
         {/* the following code makes the button that will take you to the experiment page */}
-        <a href="/experiment">
-          <button
-            style={{
-              background: 'dark-grey',
-            }}
-          >
-            <p className="button">
-              Create Experiment
-            </p>
-          </button>
-        </a>
-        {/* the following code makes the button that will take you to the algorithm page */}
-        <a href="/algorithm">
-          <button
-            style={{
-              background: 'dark-grey',
-            }}
-          >
-            <p className="button">
-              Description of Algorithms
-            </p>
-          </button>
-        </a>
-        {/* the following code makes the button that will take you to the pastResults page */}
-        <a href="./pastResults">
-          <button
-            style={{
-              background: 'dark-grey',
-            }}
-          >
-            <p className="button">
-              Past Results
-            </p>
-          </button>
-        </a>
-      </div>
+        { user ? (
+        <><p>Welcome, {user.displayName} - You're logged in</p><div>
+          <a href="/experiment">
+            <button
+              style={{
+                background: 'dark-grey',
+              }}
+            >
+              <p className="button">
+                Create Experiment
+              </p>
+            </button>
+          </a>
+          {/* the following code makes the button that will take you to the algorithm page */}
+          <a href="/algorithm">
+            <button
+              style={{
+                background: 'dark-grey',
+              }}
+            >
+              <p className="button">
+                Description of Algorithms
+              </p>
+            </button>
+          </a>
+          {/* the following code makes the button that will take you to the pastResults page */}
+          <a href="./pastResults">
+            <button
+              style={{
+                background: 'dark-grey',
+              }}
+            >
+              <p className="button">
+                Past Results
+              </p>
+            </button>
+          </a>
+        </div></>
+      ) : (
+        <p>You must be logged in to view this page - protected route</p>
+      )}
 
       <div className="relative flex place-items-center">
         {/* Other elements */}
@@ -57,4 +76,3 @@ function Home() {
 }
 
 export default Home;
-
