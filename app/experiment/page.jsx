@@ -4,7 +4,6 @@ import "./styles.css";
 import { UserAuth } from "../context/AuthContext";
 import Card from 'react-bootstrap/Card';
 import Dropdown from 'react-bootstrap/Dropdown';
-import Placeholder from 'react-bootstrap/Placeholder';
 
 const Home = () => {
   const { user } = UserAuth();
