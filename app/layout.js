@@ -12,7 +12,10 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <AuthContextProvider>
           <Navbar />
-          {children}
+          <head>
+            <link rel="icon" href="/favicon.ico" />
+          </head>
+          <body>{children}</body>
         </AuthContextProvider>
       </body>
     </html>

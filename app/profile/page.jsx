@@ -16,6 +16,7 @@ const ProfilePage = () => {
 
   return (
     <div className="p-4">
+      <title>Profile Page</title>
       {loading ? null : !user ? (
         <p>You must be logged in to view this page - protected route</p>
       ) : (
