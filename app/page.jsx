@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <main className="main-container gradient">
-      <title>Home Page</title>
+      <title>PICARD</title>
       <div className="max-w-5xl w-full items-center justify-between font-mono text-lg lg:flex grad">
         {/* The following code shows the logo in the top right corner and takes you back to the login page when clicked*/}
         <a href="/homepage"></a>
