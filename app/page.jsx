@@ -2,6 +2,8 @@
 import { React, useState, useEffect } from "react";
 import "./styles.css";
 import { UserAuth } from "./context/AuthContext";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 const Home = () => {
   const { user } = UserAuth();

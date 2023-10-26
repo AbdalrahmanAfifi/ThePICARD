@@ -2,6 +2,9 @@
 import { React, useState, useEffect } from "react";
 import "./styles.css";
 import { UserAuth } from "../context/AuthContext";
+import Card from 'react-bootstrap/Card';
+import Dropdown from 'react-bootstrap/Dropdown';
+import Placeholder from 'react-bootstrap/Placeholder';
 
 const Home = () => {
   const { user } = UserAuth();
@@ -26,80 +29,70 @@ const Home = () => {
         <p></p>
       ) : (
         <>
-          <div
-            style={{ position: "absolute", float: "left", left: 525, top: 465 }}
-          >
-            <div className="card">
-              <div className="chat-header">Results of Current Experiment</div>
-              <div className="chat-window">
-                <ul className="message-list"></ul>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{ position: "absolute", float: "left", left: 525, top: 100 }}
-          >
-            <button
-              style={{
-                background: "dark-grey",
-                width: 350,
-              }}
-            >
-              <p className="button">Environment</p>
-            </button>
-            <button
-              style={{
-                background: "dark-grey",
-              }}
-            >
-              <p className="button">Distribute</p>
-            </button>
-          </div>
-          <div
+
+      <Card className="results" style={{ width: '40rem', height: '15rem' }}>
+        <Card.Body>
+          <Card.Title style={{borderBottom: '1px white'}}>
+            Experiment Results:
+          </Card.Title>
+          
+          <Card.Text>
+            
+          </Card.Text>
+        </Card.Body>
+      </Card> 
+          
+      <div
+        style={{ position: "absolute", float: "left", left: 525, top: 100 }}
+      >
+        <button className="button" style={{ padding: 20, width: 150, marginRight: 20 }}>
+          <p>Environment</p>
+        </button>
+        
+        <button className="button">
+          <p>Distribute</p>
+        </button>
+      </div>
+ 
+      <div 
+        style={{ position: "absolute", float: "left", left: 525, top: 190 }}
+      >
+        <button className="button">
+          Number of Nodes
+          <p>
+            <input type="number" min={1} className="numNodes"></input>
+          </p>
+        </button>
+      </div>
+
+      <div className="algDropdown">
+        <Dropdown className="button">
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Select Algorithm...
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
+        
+
+        <div
+          style={{ position: "absolute", float: "left", left: 800, top: 370 }}
+        >
+          <button
             style={{
-              position: "absolute",
-              float: "left",
-              left: 1020,
-              top: 280,
+              background: "dark-grey",
+              width: 200,
             }}
           >
-            <button
-              style={{
-                background: "dark-grey",
-                width: 275,
-              }}
-            >
-              <div className="button"></div>
-            </button>
-          </div>
-          <div
-            style={{ position: "absolute", float: "left", left: 525, top: 280 }}
-          >
-            <button
-              style={{
-                background: "dark-grey",
-                width: 250,
-              }}
-            >
-              <p className="button">
-                {" "}
-                <label className="white text-sm">Number of Nodes</label>
-                <input type="number" min={0} className="node"></input>
-              </p>
-            </button>
-          </div>
-          <div
-            style={{ position: "absolute", float: "left", left: 800, top: 370 }}
-          >
-            <button
-              style={{
-                background: "dark-grey",
-                width: 200,
-              }}
-            >
-              <p className="button">Run Experiment</p>
-            </button>
-          </div>
+            <p className="button">Run Experiment</p>
+          </button>
+        </div>
+
           <div>
             <div
               style={{

@@ -132,3 +132,34 @@ html body {
 .gradient { 
   background-image: radial-gradient(circle closest-corner at 76% 57%,blue 1%,#0000 45%);
 }
+
+.results {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #4f4f4f;
+  border-radius: 13px;
+  transition: all 0.2s ease-in;
+  background-image: linear-gradient(to bottom, #0c0a09, #18181b);
+  position: absolute;
+  overflow: hidden;
+  color: white;
+  z-index: 1;
+  left: 525px;
+  top: 482px;
+}
+
+.algDropdown {
+  position: absolute;
+  left: 525px;
+  top: 280px;
+}
+
+.numNodes {
+  background: #0c0a09;
+  resize: horizontal;
+  width: auto;
+}
+
+.numNodes:active {
+  width: auto;
+}
