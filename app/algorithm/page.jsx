@@ -105,8 +105,10 @@ const Home = () => {
 
               <button className="button" style={{ background: 'dark-grey', width: 300, bottom: 375, right: 950}}>
                   <p>
-                    <label htmlFor="avatar">Upload New Algorithm</label><br />
-                    <input type="file" name="avatar" accept="image/png, image/jpeg" />
+              
+                    <a href="/addalgo">
+                      Add Algorithm
+                    </a>
                   </p>
               </button>
             </div>
