@@ -39,16 +39,36 @@ const Navbar = () => {
       <li className="p-2 cursor-pointer">
       <Image src="/logo.png" width={100} height={100} alt="" />
         </li>
-        <button className="button" style={{ position: 'absolute', left: 130, top: 15 }}>
+        
         <li className="p-2 cursor-pointer">
-          <Link href="/">Home</Link>
+          <a href="/">
+              <button
+                style={{
+                  position: 'absolute', left: 130, top: 15
+                }}
+              >
+                <p className="button">Home</p>
+              </button>
+            </a>
         </li>
-        </button>
-        <button className="button" style={{ position: 'absolute', left: 250, top: 15 }}>
+        
+        
           <li className="p-2 cursor-pointer">
-            <Link href="/about">About</Link>
+          {/* <button className="button" style={{ position: 'absolute', left: 250, top: 15 }}>
+            <a href="/about">About</a>
+            </button> */}
+            <a href="/about">
+              <button
+                style={{
+                  position: 'absolute', left: 250, top: 15
+                }}
+              >
+                <p className="button">About</p>
+              </button>
+            </a>
+            
           </li>
-        </button>
+        
       </ul>
 
       {loading ? null : !user ? (

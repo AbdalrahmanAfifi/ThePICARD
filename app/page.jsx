@@ -21,7 +21,7 @@ const Home = () => {
       <title>PICARD</title>
       <div className="max-w-5xl w-full items-center justify-between font-mono text-lg lg:flex grad">
         {/* The following code shows the logo in the top right corner and takes you back to the login page when clicked*/}
-        <a href="/homepage"></a>
+        
       </div>
       {/* the following code makes the button that will take you to the experiment page */}
       {loading ? null : !user ? (
