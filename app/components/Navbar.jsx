@@ -71,13 +71,15 @@ const Navbar = () => {
         
       </ul>
 
-      {loading ? null : !user ? (
+      {!user ? (
         <ul className="flex">
-          <button className="button">
+          
           <li onClick={handleSignIn} className="p-2 cursor-pointer">
+          <button className="button">
             Login
+            </button>
           </li>
-          </button>
+          
         </ul>
       ) : (
         <div>
