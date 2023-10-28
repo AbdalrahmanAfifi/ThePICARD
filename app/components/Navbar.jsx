@@ -37,22 +37,18 @@ const Navbar = () => {
         
       <ul className="flex">
       <li className="p-2 cursor-pointer">
-      <Image src="/logo.png" width={50} height={50} alt="" />
+      <Image src="/logo.png" width={100} height={100} alt="" />
         </li>
-        <button className="button">
+        <button className="button" style={{ position: 'absolute', left: 130, top: 15 }}>
         <li className="p-2 cursor-pointer">
           <Link href="/">Home</Link>
         </li>
         </button>
-        <li className="p-2 cursor-pointer">
-          <Link href="/about">About</Link>
-        </li>
-
-        {!user ? null : (
+        <button className="button" style={{ position: 'absolute', left: 250, top: 15 }}>
           <li className="p-2 cursor-pointer">
-            <Link href="/profile">Profile</Link>
+            <Link href="/about">About</Link>
           </li>
-        )}
+        </button>
       </ul>
 
       {loading ? null : !user ? (

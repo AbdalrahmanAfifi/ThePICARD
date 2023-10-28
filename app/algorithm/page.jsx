@@ -102,23 +102,15 @@ const Home = () => {
               >
                 <p className="button">Algorithm 4: Description</p>
               </button>
-            </div>
 
-            {/* <div style={{position:"absolute", float: "left", left:230, top:170}}>
-        <Link href="/addalgorithm">
-    <button
-      style={{
-        background: 'dark-grey',
-      }}
-    >
-      <p className="button">
-        Add Algorithm
-      </p>
-    </button>
-  </Link>
-           
-        </div> */}
-          </div>
+              <button className="button" style={{ background: 'dark-grey', width: 300, bottom: 375, right: 950}}>
+                  <p>
+                    <label htmlFor="avatar">Upload New Algorithm</label><br />
+                    <input type="file" name="avatar" accept="image/png, image/jpeg" />
+                  </p>
+              </button>
+            </div>
+      </div>
         </>
       )}
 
