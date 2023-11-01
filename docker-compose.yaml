@@ -10,5 +10,5 @@ services:
     volumes:
       - ./src:/src/app
     environment:
-     REACT_APP_NAME: ThePICARD
-     CHOKIDAR_USEPOLLING: true
+     - REACT_APP_NAME=ThePICARD
+     - CHOKIDAR_USEPOLLING=true
